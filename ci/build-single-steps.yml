@@ -47,6 +47,7 @@ steps:
 - task: PublishTestResults@2
   displayName: Publish Test Results **/test-*.xml
   inputs:
+    testResultsFiles: '**/test-*.xml'
     testRunTitle: 'Node 6 Test Results'
 
 
@@ -58,6 +59,7 @@ steps:
 - task: PublishTestResults@2
   displayName: Publish Test Results **/test-*.xml
   inputs:
+    testResultsFiles: '**/test-*.xml'
     testRunTitle: 'Node 5 Test Results'  
 
 # Stop collect diagnostics
