@@ -58,9 +58,9 @@ steps:
 
 # Publish test results
 - task: PublishTestResults@2
-  displayName: Publish Test Results **/test-*.xml
+  displayName: Publish Test Results test-*.xml
   inputs:
-    testResultsFiles: '**/test-*.xml'
+    testResultsFiles: 'test-*.xml'
     testRunTitle: 'Node 6 Test Results'
 
 # Test with node 5
@@ -69,9 +69,9 @@ steps:
 - script: node make.js testLegacy --node 5 --runner ts --task "$(task_pattern)"
   displayName: Legacy tests with node 5
 - task: PublishTestResults@2
-  displayName: Publish Test Results **/test-*.xml
+  displayName: Publish Test Results test-*.xml
   inputs:
-    testResultsFiles: '**/test-*.xml'
+    testResultsFiles: 'test-*.xml'
     testRunTitle: 'Node 5 Test Results'
 
 # Only when building on Windows:
