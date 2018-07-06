@@ -42,8 +42,10 @@ steps:
   displayName: Test with node 6
 - script: node make.js testLegacy --task "$(task)"
   displayName: Legacy tests with node 6
+
+# Publish test results
 - task: PublishTestResults@2
-  displayName: Publish Test Results **/TEST-*.xml
+  displayName: Publish Test Results **/test-*.xml
   inputs:
     testRunTitle: 'Node 6 Test Results'
 
@@ -54,7 +56,7 @@ steps:
 - script: node make.js testLegacy --node 5 --runner ts --task "$(task)"
   displayName: Legacy tests with node 5
 - task: PublishTestResults@2
-  displayName: Publish Test Results **/TEST-*.xml
+  displayName: Publish Test Results **/test-*.xml
   inputs:
     testRunTitle: 'Node 5 Test Results'  
 
