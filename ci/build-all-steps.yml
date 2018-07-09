@@ -62,7 +62,7 @@ steps:
   inputs:
     testResultsFiles: 'test-*.xml'
     testRunTitle: 'Node 6 Test Results'
-    searchFolder: '$(System.DefaultWorkingDirectory)\testresults'
+    searchFolder: '$(System.DefaultWorkingDirectory)/testresults'
 
 # Test with node 5
 - script: node make.js test --node 5 --runner ts --reporter mocha-junit-reporter
@@ -74,7 +74,7 @@ steps:
   inputs:
     testResultsFiles: 'test-*.xml'
     testRunTitle: 'Node 5 Test Results'
-    searchFolder: '$(System.DefaultWorkingDirectory)\testresults'
+    searchFolder: '$(System.DefaultWorkingDirectory)/testresults'
 
 # Only when building on Windows:
 - ${{ if eq(parameters.os, 'Windows_NT') }}:
