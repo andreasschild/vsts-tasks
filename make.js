@@ -470,7 +470,7 @@ target.testLegacy = function() {
     });
     contents += '});' + os.EOL;
     fs.writeFileSync(testsSpecPath, contents);
-    run('mocha ' + testsSpecPath + ' --reporter mocha-junit-reporter --reporter-options mochaFile=./test-legacy-results.xml', /*inheritStreams:*/true);
+    run('mocha ' + testsSpecPath + ' --reporter mocha-junit-reporter --reporter-options mochaFile=../testresults/test-legacy-results.xml', /*inheritStreams:*/true);
 }
 
 // 
